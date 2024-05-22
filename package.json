@@ -1,6 +1,6 @@
 {
   "name": "oui-mac",
-  "version": "1.0.0",
+  "version": "1.0.0-readme",
   "description": "Small library to parse a MAC address and retrieve data from the IEEE OUI DB.",
   "main": "index.js",
   "scripts": {
