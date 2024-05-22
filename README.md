@@ -1,6 +1,14 @@
 ```js
 const MAC = require("oui-mac");
 const fs = require("fs");
+```
+or
+```ts
+import * as MAC from "oui-mac";
+import * as fs from "fs";
+```
+then
+```js
 // Download it from https://standards-oui.ieee.org/oui/oui.txt
 const ouitxt = fs.readFileSync("oui.txt", "utf8");
 const OUIDb = MAC.OUIDb(ouitxt);
@@ -23,6 +31,4 @@ function printMac(mac) {
     }
 }
 printMac("bc:24:11:cf:9a:4b")
-
-
 ```
