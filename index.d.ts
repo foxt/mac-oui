@@ -1,0 +1,10 @@
+export function parse(mac: string | number | bigint): bigint;
+export function toString(mac: bigint): string;
+export function getOui(mac: bigint): string;
+export function getMulticast(mac: bigint): boolean;
+export function getLAA(mac: bigint): boolean;
+export function isDocker(mac: bigint): boolean;
+type Vendor = { name: string; address: string; region: string; country: string; };
+type OUIDatabase = Map<string, Vendor>;
+export function OUIDb(ouitxt: string): Map<string, Vendor>;
+export function getVendor(mac: bigint, db: OUIDatabase): Vendor;
