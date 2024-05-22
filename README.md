@@ -24,27 +24,5 @@ function printMac(mac) {
 }
 printMac("bc:24:11:cf:9a:4b")
 
-console.log ("Running ARP scan...")
-let foundMacs = new Map();
-const { execSync } = require("child_process");
-const arp = execSync("arp -a").toString();
-const lines = arp.split("\n");
-for (var line of lines) {
-    let parts = line.trim().split(' ');
-    if (parts.length < 4) continue;
-    const name = parts[0];
-    let ip = parts[1].substring(1, parts[1].length - 1);
-    let mac = parts[3];
-    if (!mac.includes(":")) continue;
-    if (!foundMacs.has(mac)) foundMacs.set(mac, []);
-    foundMacs.get(mac).push({name, ip});
-}
-console.log("Found MACs:");
-for (var [mac, devices] of foundMacs) {
-    printMac(mac);
-    console.log("  - Devices:");
-    for (var device of devices) {
-        console.log(`    - ${device.name} (${device.ip})`);
-    }
-}
+
 ```
