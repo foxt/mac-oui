@@ -1,0 +1,23 @@
+{
+  "name": "mac-oui",
+  "version": "1.0.0",
+  "description": "Small library to parse a MAC address and retrieve data from the IEEE OUI DB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxt/mac-oui.git"
+  },
+  "keywords": [
+    "mac-address",
+    "oui"
+  ],
+  "author": "foxt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foxt/mac-oui/issues"
+  },
+  "homepage": "https://github.com/foxt/mac-oui#readme"
+}
